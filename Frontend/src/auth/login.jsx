@@ -50,7 +50,7 @@ function Login() {
      
 
       try {
-        const response = await axios.post('http://localhost:5000/api/v1/users/login',data);
+        const response = await axios.post('https://interiit13-0-3.onrender.com/api/v1/users/login',data);
         console.log(response.data.data)
         setDbError("")
         dispatch(login({user: response.data.data.user,accessToken: response.data.data.accessToken,refreshToken: response.data.data.refreshToken}));

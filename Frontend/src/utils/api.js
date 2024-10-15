@@ -5,7 +5,7 @@ import { logout,updateTokens } from '../AppStore/authSlice';
 
 
 const axiosInstance = axios.create({
-    baseURL: '/api/v1', 
+    baseURL: 'https://interiit13-0-3.onrender.com/api/v1', 
     withCredentials: true, 
   });
   

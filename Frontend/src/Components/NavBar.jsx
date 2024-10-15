@@ -33,7 +33,7 @@ const Navbar = () => {
         };
 
         const response = await axios.post(
-          '/api/v1/users/logout',
+          'https://interiit13-0-3.onrender.com/api/v1/users/logout',
           {},
           config
         );
