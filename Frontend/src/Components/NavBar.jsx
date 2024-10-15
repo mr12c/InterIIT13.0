@@ -33,7 +33,7 @@ const Navbar = () => {
         };
 
         const response = await axios.post(
-          'http://localhost:5000/api/v1/users/logout',
+          '/api/v1/users/logout',
           {},
           config
         );
