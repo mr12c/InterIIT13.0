@@ -1,0 +1,18 @@
+ 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: vishal;
+    src: url('../public/f1.ttf');
+}
+
+*{
+    font-family: vishal;
+   
+}
+
+.gmt{
+    transition: all linear 0.4s;
+}
