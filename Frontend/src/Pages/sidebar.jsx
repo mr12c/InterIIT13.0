@@ -19,20 +19,20 @@ function Sidebar() {
     }
   }, [data]);
 
-    //  useEffect(()=>
-    //   {
-    //     const func = async () =>{
-    //       try{
-    //         const response = await axios.post('https://interiit13-0-3.onrender.com/api/v1/item/changeGodown',{godown_id,item_id})
-    //         console.log(response.data)
-    //       }
-    //       catch(error){
-    //         console.log(error)
-    //       }
-    //     }
-    //     func()
+     useEffect(()=>
+      {
+        const func = async () =>{
+          try{
+            const response = await axios.post('https://interiit13-0-3.onrender.com/api/v1/item/changeGodown',{godown_id,item_id})
+            console.log(response.data)
+          }
+          catch(error){
+            console.log(error)
+          }
+        }
+        func()
       
-    //  },[item_id,godown_id])
+     },[item_id,godown_id])
 
   const handleItemDrop = (draggedItem, targetGodownId) => {
     console.log("Item dropped:", draggedItem);
