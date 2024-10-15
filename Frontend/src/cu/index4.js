@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import fetchApiDataGet from '../utils/error2';
-import axiosInstance from '../utils/api.JS';
+import axiosInstance from '../utils/api.js';
 
 const useFetchDataPostAxios = (endpoint) => {
   const [data, setData] = useState(null);
