@@ -8,7 +8,7 @@ import axios from "axios";
 function Sidebar() {
   const { toggle } = useSelector((state) => state.AppSlice);
   const dispatch = useDispatch();
-  const { data } = useFetchDataPostAxios("/godown/allgodown");
+  const {data} = useFetchDataPostAxios("/godown/allgodown");
   const [godownData, setGodownData] = useState([]);
   const [godown_id, setGodown_id] = useState();
   const [item_id,setItem_id] = useState();
