@@ -5,7 +5,7 @@ import { logout,updateTokens } from '../AppStore/authSlice';
 
 
 const axiosInstance = axios.create({
-    baseURL: '/api/v1', 
+    baseURL: 'http://localhost:5000/api/v1', 
     withCredentials: true, 
   });
   
