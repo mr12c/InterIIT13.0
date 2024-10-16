@@ -26,7 +26,7 @@ To run the frontend, make sure docker is installed in you system if not then dow
    docker build -t app .
 3. Run the Image
    ```bash 
-   docker run -p 5173:5173 app
+   docker run -p 3000:3000 app
 
 ## 💿 Running the Backend
 
