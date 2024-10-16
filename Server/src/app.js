@@ -25,13 +25,25 @@ app.use(express.json({limit:"16kb"}))//// for getting the form data
 app.use(express.urlencoded({extended:true,limit:"16kb"}))  //// /for getting data from urlencoded extended is using for reading data from  nested objects also
 app.use(express.static('Public'))
 
+const allowedOrigins = [
+  "https://interiitgodown.netlify.app",
+  "http://localhost:5173"
+  
+];
+
 app.use((req, res, next) => {
-    res.header("Access-Control-Allow-Origin", "https://interiitgodown.netlify.app");
-    res.header("Access-Control-Allow-Credentials", "true"); // Allow cookies
-    res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-    res.header("Access-Control-Allow-Headers", "Content-Type, Authorization,AuthorizationRef");
-    next();
-  });
+  const origin = req.headers.origin;
+
+  if (allowedOrigins.includes(origin)) {
+    res.header("Access-Control-Allow-Origin", origin);
+  }
+
+  res.header("Access-Control-Allow-Credentials", "true");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
+  res.header("Access-Control-Allow-Headers", "Content-Type, Authorization, AuthorizationRef");
+
+  next();
+});
 
  
 
