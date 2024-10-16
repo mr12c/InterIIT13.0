@@ -27,7 +27,8 @@ app.use(express.static('Public'))
 
 const allowedOrigins = [
   "https://interiitgodown.netlify.app",
-  "http://localhost:5173"
+  "http://localhost:5173",
+   "http://localhost:3000"
   
 ];
 
