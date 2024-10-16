@@ -23,7 +23,7 @@ function Sidebar() {
       {
         const func = async () =>{
           try{
-            const response = await axios.post('api/v1/item/changeGodown',{godown_id,item_id})
+            const response = await axios.post('http://localhost:5000/api/v1/item/changeGodown',{godown_id,item_id})
             console.log(response.data)
           }
           catch(error){
