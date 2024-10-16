@@ -2,8 +2,9 @@ import React from 'react'
 import useFetchDataGet from '../cu/index2'
 import { useState ,useEffect} from 'react'
 import ProductCard from './ProductCard'
+import useFetchDataGetAxios from '../cu/index3'
 function SimmilarItem({category}) {
-    const {data, loading, error} = useFetchDataGet(`/item/getItemByCategory/${category}`)
+    const {data, loading, error} =  useFetchDataGetAxios(`/item/getItemByCategory/${category}`)
   console.log(data)
   const [items,setItems] = useState()
   
