@@ -1,4 +1,4 @@
-# Dockerfile for React app using Vite
+# Dockerfile for running React app using Vite in development mode
 
 # Use an official Node.js runtime as a parent image
 FROM node:18
@@ -15,14 +15,8 @@ RUN npm install
 # Copy the rest of the application code to the container
 COPY . .
 
-# Build the app
-RUN npm run build
+# Expose the port Vite will run on
+EXPOSE 5173
 
-# Install a lightweight web server to serve the build (e.g., serve)
-RUN npm install -g serve
-
-# Expose the port the app will run on
-EXPOSE 3000
-
-# Start the app using 'serve' to serve the build directory
-CMD ["serve", "-s", "dist", "-l", "3000"]
+# Start the app using Vite
+CMD ["npm", "run", "dev"]
