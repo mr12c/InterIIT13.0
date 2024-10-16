@@ -3,7 +3,7 @@ import useFetchDataGet from '../cu/index2'
 import { useState ,useEffect} from 'react'
 import ProductCard from './ProductCard'
 function SimmilarItem({category}) {
-    const {data, loading, error} = useFetchDataGet(`http://localhost:5000/item/getItemByCategory/${category}`)
+    const {data, loading, error} = useFetchDataGet(`/item/getItemByCategory/${category}`)
   console.log(data)
   const [items,setItems] = useState()
   
